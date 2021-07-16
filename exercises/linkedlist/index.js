@@ -17,6 +17,8 @@ class LinkedList {
         const node = new Node(data, this.head)
         node.next = this.head
         this.head = node
+        
+        // this.head = new Node(data, this.head)
 
     }
 }
