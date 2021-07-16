@@ -17,9 +17,16 @@ class LinkedList {
         const node = new Node(data, this.head)
         node.next = this.head
         this.head = node
-        
-        // this.head = new Node(data, this.head)
-
+        // this.head = new Node(data, this.head
+    }
+    size() {
+        let pointer = this.head
+        let count = 0
+        while (pointer) {
+            pointer = pointer.next
+            count ++
+        }
+        return count
     }
 }
 
