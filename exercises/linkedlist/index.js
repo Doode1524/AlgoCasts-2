@@ -118,6 +118,13 @@ class LinkedList {
     const node = new Node(data, previous.next);
     previous.next = node;
   }
+  forEach(fn) {
+    let pointer = this.head;
+    while (pointer) {
+      fn(pointer);
+      pointer = pointer.next;
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };
