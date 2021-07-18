@@ -125,6 +125,14 @@ class LinkedList {
       pointer = pointer.next;
     }
   }
+  
+  *[Symbol.iterator]() {
+      let pointer = this.head
+      while (pointer) {
+          yield pointer
+          pointer = pointer.next
+      }
+  }
 }
 
 module.exports = { Node, LinkedList };
