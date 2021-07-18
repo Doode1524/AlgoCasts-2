@@ -43,7 +43,30 @@ class LinkedList {
      this.head = null
   }
   removeFirst() {
+      if(!this.head) {
+          return
+      }
       this.head = this.head.next
+  }
+  removeLast() {
+
+    if(!this.head) {
+        return
+    }
+    if (!this.head.next) {
+        this.head = null
+        return
+    }
+
+    let prev = this.head
+    let pointer = this.head.next
+
+    while(pointer.next){
+        prev = pointer
+        pointer = pointer.next
+    }
+    prev.next = null
+    
   }
 }
 
