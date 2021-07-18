@@ -40,32 +40,39 @@ class LinkedList {
     return pointer;
   }
   clear() {
-     this.head = null
+    this.head = null;
   }
   removeFirst() {
-      if(!this.head) {
-          return
-      }
-      this.head = this.head.next
+    if (!this.head) {
+      return;
+    }
+    this.head = this.head.next;
   }
   removeLast() {
-
-    if(!this.head) {
-        return
+    if (!this.head) {
+      return;
     }
     if (!this.head.next) {
-        this.head = null
-        return
+      this.head = null;
+      return;
     }
 
-    let prev = this.head
-    let pointer = this.head.next
+    let prev = this.head;
+    let pointer = this.head.next;
 
-    while(pointer.next){
-        prev = pointer
-        pointer = pointer.next
+    while (pointer.next) {
+      prev = pointer;
+      pointer = pointer.next;
     }
-    prev.next = null
+    prev.next = null;
+  }
+  insertLast(data) {
+    let last = this.getLast();
+    if (last) {
+      last.next = new Node(data);
+    } else {
+        this.head = new Node(data)
+    }
     
   }
 }
