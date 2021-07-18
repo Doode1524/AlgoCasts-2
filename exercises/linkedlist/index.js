@@ -79,7 +79,6 @@ class LinkedList {
     }
   }
   getAt(index) {
-   
     let count = 0;
     let pointer = this.head;
 
@@ -91,6 +90,21 @@ class LinkedList {
       pointer = pointer.next;
     }
     return null;
+  }
+  removeAt(index) {
+    if (!this.head) {
+      return;
+    }
+    if (index === 0) {
+        this.head = this.head.next
+        return
+    }
+    const previous = this.getAt(index - 1)
+    if (!previous || !previous.next) {
+        return
+    }
+    previous.next = previous.next.next
+
   }
 }
 
