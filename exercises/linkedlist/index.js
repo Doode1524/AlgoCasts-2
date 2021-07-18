@@ -39,6 +39,9 @@ class LinkedList {
 
     return pointer;
   }
+  clear() {
+     this.head = null
+  }
 }
 
 module.exports = { Node, LinkedList };
