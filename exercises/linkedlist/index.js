@@ -126,7 +126,7 @@ class LinkedList {
     }
   }
   
-  *[Symbol.iterator]() {
+  *[Symbol.iterator]() {   // generator
       let pointer = this.head
       while (pointer) {
           yield pointer
