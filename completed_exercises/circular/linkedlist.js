@@ -6,7 +6,7 @@ class Node {
 }
 
 class LinkedList {
-  constructor(values = []) {
+  constructor() {
     this.head = null;
 
     for (let value of values) {
