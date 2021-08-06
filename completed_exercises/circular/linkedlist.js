@@ -6,7 +6,7 @@ class Node {
 }
 
 class LinkedList {
-  constructor() {
+  constructor(values = []) {
     this.head = null;
 
     for (let value of values) {
@@ -174,5 +174,3 @@ class LinkedList {
     }
   }
 }
-
-module.exports = { Node, LinkedList };
