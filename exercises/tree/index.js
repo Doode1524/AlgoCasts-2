@@ -35,9 +35,17 @@ class Tree {
     while (arr.length) {
       const node = arr.shift();
       arr.push(...node.children); // for loop refactor
-    //   for (let child of node.children) {
-    //     arr.push(child);
-    //   }
+      //   for (let child of node.children) {
+      //     arr.push(child);
+      //   }
+      fn(node);
+    }
+  }
+  traverseDF(fn) {
+    const arr = [this.root];
+    while (arr.length) {
+      const node = arr.shift();
+      arr.unshift(...node.children);
       fn(node);
     }
   }
